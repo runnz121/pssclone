@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.msystech.careme.domain.blockchain.dao.BlockChainMapper">
+
+    <insert id="save" parameterType="com.msystech.careme.domain.blockchain.domain.BlockChain">
+	<![CDATA[
+        INSERT INTO BC_HISTORY
+        (MsgID, ReqDT, ResDT, PatChtNum, ComNum, WorkID, WorkCategory, ReqID, ReqIP, Svce_Domain)
+        VALUES
+        (#{msgID}, #{reqDT}, #{resDT}, #{patChtNum}, #{comNum}, #{workID}, #{workCategory}, #{reqID}, #{reqIP}, #{svceDomain})
+        ]]>
+	</insert>
+</mapper>
