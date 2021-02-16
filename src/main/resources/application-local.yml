@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    - local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://133.186.215.14:10000/pssportal?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: msys1
+    password: 12qwaszx@!
+server:
+  servlet:
+    session:
+      timeout: 0
+  blockchain: 133.186.208.16
+  http:
+    port: 80
+  port: ${appPort:80}
+  additionalPorts: 8080
+  ssl:
+    enabled: false
+    key-store: C:\careme_keystore.jks
+    key-store-password: 123456
+    key-store-type: JKS

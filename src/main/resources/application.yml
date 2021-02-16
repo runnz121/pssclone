@@ -1,0 +1,22 @@
+#local, prod 공통 설정
+spring:
+  profiles:
+    active:
+      - local
+  thymeleaf:
+    prefix: classpath:templates
+    suffix: .html
+    check-template-location: true
+    mode: HTML
+    cache: true
+
+  session:
+    timeout: 0
+
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    return-instance-for-empty-row: false
+    jdbc-type-for-null: null
+    cache-enabled: false
